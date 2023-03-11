@@ -8,7 +8,7 @@ import {
 const useSignup = () => {
   const [signemail, setSignEmail] = useRecoilState<string>(signupEmailAtom);
   const [signpassword, setSignPassword] =
-    useRecoilState<number>(signupPasswordAtom);
+    useRecoilState<string>(signupPasswordAtom);
   const [signname, setSignName] = useRecoilState<string>(signupNameAtom);
 
   const signupEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,7 +16,7 @@ const useSignup = () => {
   };
 
   const signupPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSignPassword(parseFloat(e.target.value));
+    setSignPassword(e.target.value);
   };
 
   const signupName = (e: React.ChangeEvent<HTMLInputElement>) => {

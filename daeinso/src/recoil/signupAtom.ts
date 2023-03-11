@@ -5,9 +5,9 @@ export const signupEmailAtom = atom<string>({
   default: "",
 });
 
-export const signupPasswordAtom = atom<number>({
+export const signupPasswordAtom = atom<string>({
   key: "singupPasswordAtom",
-  default: 0,
+  default: "",
 });
 
 export const signupNameAtom = atom<string>({
