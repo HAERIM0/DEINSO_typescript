@@ -10,10 +10,10 @@ import {
 } from "../../recoil/signupAtom";
 import { STACK } from "../../constants/stack/STACK";
 import { AGE } from "../../constants/age/AGE";
-import useSignup from "../../hook/SignupHook/useSignup";
+import useSignupChange from "../../hook/SignupHook/useSignupChange";
 
 export default function Signup() {
-  const { signupEmail, signupPassword, signupName } = useSignup();
+  const { signupEmail, signupPassword, signupName } = useSignupChange();
   const [signemail, setSignEmail] = useRecoilState(signupEmailAtom);
   const [signpassword, setSignPassword] = useRecoilState(signupPasswordAtom);
   const [signname, setSignName] = useRecoilState(signupNameAtom);
@@ -67,7 +67,7 @@ export default function Signup() {
             </button>
           ))}
         </S.SignupStack>
-        <button></button>
+        {/* <button></button> */}
       </S.Signup>
     </S.SignupBox>
   );
